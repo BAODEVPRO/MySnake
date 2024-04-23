@@ -1,0 +1,26 @@
+void gotoxy(int column, int line){
+	COORD coord;
+	coord.X=column;
+	coord.Y=line;
+	SetConsoleCursorPosition(
+		GetStdHandle(STD_OUTPUT_HANDLE),
+		coord
+	);
+}
+
+struct Toado{
+	int x,y;
+};
+
+struct HQ{
+	Toado td;
+};
+
+void Random(SNAKE& snake, HQ& hq){
+	if(snake.A[0].x==hq.td.x && snake.A[0].y==hq.td.y){
+		hq.td.x=rand()%69+5;
+		hq.td.y=rand()%18+8;
+		snake.Leng++;
+		beep(1000,100);
+		gotoxy(78,40);
+}
