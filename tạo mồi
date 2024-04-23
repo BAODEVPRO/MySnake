@@ -24,3 +24,35 @@ void Random(SNAKE& snake, HQ& hq){
 		beep(1000,100);
 		gotoxy(78,40);
 }
+
+struct NODE {
+ int x, y;
+};
+
+struct SNAKE {
+ NODE A[100];
+ int Leng;
+};
+
+void Init(SNAKE& snake) {//ugiyguyg
+ snake.Leng = 7;
+ snake.A[0].x = 9; snake.A[0].y = 5;
+ snake.A[1].x = 8; snake.A[1].y = 5;
+ snake.A[2].x = 7; snake.A[2].y = 5;
+ snake.A[3].x = 7; snake.A[3].y = 4;
+ snake.A[4].x = 7; snake.A[4].y = 3;
+ snake.A[5].x = 6; snake.A[5].y = 3;
+ snake.A[6].x = 5; snake.A[6].y = 3;
+}
+
+void Draw(SNAKE snake) {//iyfuygiy
+ int i;
+ for ( i = 0; i < snake.Leng; i++) {
+  gotoxy(snake.A[i].x*2, snake.A[i].y);
+  printf("%c%c", 219, 219);
+  Sleep(1000);
+ }
+ gotoxy(snake.A[i].x * 2, snake.A[i].y);
+ cout << " ";
+ gotoxy(40, 20);
+}
