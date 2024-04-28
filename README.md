@@ -11,8 +11,8 @@
 
 ## Thông tin nhóm <a name="info"></a>
 
-Lớp: **SS004.M13** \
-Tên nhóm: **3PGT** \
+Lớp: **** \
+Tên nhóm: **** \
 Thành viên:
 | STT  | Tên                | MSSV      | Ghi chú     |
 |:-----|:-------------------|:----------|:------------|
