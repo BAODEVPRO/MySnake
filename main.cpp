@@ -14,6 +14,8 @@ private:
     int x, y, diem;
     int duoiX[100], duoiY[100];
     int soDuoi;
+    int quaX,quaY;
+    bool daanqua;
     enum Huong { STOP = 0, TRAI, PHAI, LEN, XUONG };
     Huong huong;
 
@@ -34,6 +36,7 @@ ConRan::ConRan()
     y = CHIEUCAO / 2;
     diem = 0;
     soDuoi = 0;
+    daanqua=true;
 }
 
 void ConRan::CaiDat()
@@ -44,6 +47,7 @@ void ConRan::CaiDat()
     y = CHIEUCAO / 2;
     diem = 0;
     soDuoi = 0;
+    daanqua=true;
 }
 
 void ConRan::Ve()
@@ -61,6 +65,8 @@ void ConRan::Ve()
                 cout << "#";
             if (i == y && j == x)
                 cout << "0";
+            else if(i==quaY && j==quaX)
+                cout<<"F";
             else
             {
                 bool inDuoi = false;
