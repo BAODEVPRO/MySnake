@@ -7,7 +7,8 @@ using namespace std;
 const int width = 30;
 const int height = 20;
 
-class Snake {
+class Snake
+{
 private:
     bool gameOver;
     int x, y, score;
