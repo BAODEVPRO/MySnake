@@ -162,8 +162,20 @@ void ConRan::XuLy()
     for (int i = 0; i < soDuoi; i++)
         if (duoiX[i] == x && duoiY[i] == y)
             ketThuc = true;
-}
 
+    if (x == quaX && y == quaY) {
+        diem += 10;
+        soDuoi++;
+        daanqua = true;
+    }
+
+
+    if (daanqua) {
+        quaX = rand() % CHIEURONG;
+        quaY = rand() % CHIEUCAO;
+        daanqua = false;
+    }
+}
 bool ConRan::Gameover()
 {
     return ketThuc;
