@@ -20,12 +20,12 @@ private:
     Huong huong;
 
 public:
-    ConRan();
-    void CaiDat();
-    void Ve();
-    void Nhap();
-    void XuLy();
-    bool Gameover();
+    ConRan();            // constructor
+    void CaiDat();       // hàm cài đặt để bắt đầu
+    void Ve();           // hàm vẽ : con rắn (OOOO0) ,tường (###), mồi (o)
+    void Nhap();         // nhập dữ liệu đầu vào để di chuyển (w,a,s,d) và x để kết thúc trò chơi
+    void XuLy();         // hàm xử lý dữ liệu để kết thúc trò chơi (cắn trúng đuôi,đụng tường)
+    bool Gameover();     // xác nhập trò chơi kết thúc
 };
 
 ConRan::ConRan()
@@ -66,7 +66,7 @@ void ConRan::Ve()
             if (i == y && j == x)
                 cout << "0";
             else if(i==quaY && j==quaX)
-                cout<<"F";
+                cout<<"o";
             else
             {
                 bool inDuoi = false;
