@@ -1,8 +1,10 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
+
 #include <graphics.h>
 #include <ctime>    
+
 using namespace std;
 enum DIR {LEFT , UP , RIGHT , DOWN};        
 ////// CO CAU VI TRI --  DUOC SU DUNG TRONG RAN CHI DO GIA TRI DAT TRUOC CUA NO
