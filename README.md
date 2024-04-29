@@ -12,7 +12,6 @@
 ## Thông tin nhóm <a name="info"></a>
 
 Lớp: **SS004.O21** \
-Tên nhóm: **** \
 Thành viên:
 | STT  | Tên                | MSSV      | Ghi chú     |
 |:-----|:-------------------|:----------|:------------|
