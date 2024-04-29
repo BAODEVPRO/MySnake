@@ -49,7 +49,7 @@ Xây dựng game con rắn bằng ngôn ngữ C++
   
 ## Demo <a name="demo"></a>
   
-
+https://github.com/BAODEVPRO/MySnake/assets/144899847/cfe6c8f1-4bd9-4639-a36b-a686a35a9a79
 
 
 [Lên đầu trang](#top)
