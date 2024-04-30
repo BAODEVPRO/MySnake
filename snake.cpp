@@ -268,12 +268,12 @@ floodfill(790, 300, GREEN);
         settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 2);
                  setcolor(BLUE);
                  outtextxy(520, 300, "STATUS :-");
-                 if (RAN.getChieuDai() == 30)
+                 if (than.LayChieuDai() == 30)
                  {
                       outtextxy(520, 350, "YOU WON !");
-                      playing=false;
+                	choi=false;
                  }
-                 else if(playing)
+                 else if(choi)
                  {
                       outtextxy(520, 350, "PLAYING");
                  }
