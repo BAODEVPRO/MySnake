@@ -6,9 +6,6 @@
 #include <graphics.h>
 using namespace std;
 
-const int ROWS = 20;
-const int COLS = 40;
-
 enum HUONG { TRAI, LEN, PHAI, XUONG };
 
 struct VI_TRI
@@ -19,15 +16,15 @@ struct VI_TRI
 class ConRan
 {
 private:
-    VI_TRI mang[ROWS * COLS];
+    VI_TRI mang[31];
     int Huong;
     int ChieuDai;
 
 public:
     ConRan()
     {
-        mang[0].x = 10;
-        mang[0].y = 10;
+        mang[0].x = 30;
+        mang[0].y = 30;
         ChieuDai = 1;
         Huong = PHAI;
     }
@@ -57,7 +54,7 @@ void ConRan::VeRan()         // Vẽ Rắn
 
 void ConRan::ThemPhan()
 {
-    if (ChieuDai < ROWS* COLS)
+    if (ChieuDai < 30)
         ChieuDai++;
 }
 
@@ -224,7 +221,7 @@ int main()
 
         if (qua.CapNhat(than.LayToaDoX(), than.LayToaDoY()))
         {
-            qua.TaoViTri(than.LayToaDoX(), than.LayToaDoY());
+            qua.TaoViTri();
             than.ThemPhan();
         }
 
