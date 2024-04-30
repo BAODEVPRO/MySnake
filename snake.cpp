@@ -151,8 +151,9 @@ public:
 void ThucAn::TaoViTri()
 {
     srand(time(0));
-    viTriThucAn.x = rand() % COLS;
-    viTriThucAn.y = rand() % ROWS;
+    viTriThucAn.x = 30 * (rand() % 15 + 1);
+    srand(time(0));
+    viTriThucAn.y = 30 * (rand() % 15 + 1);
 }
 
 bool ThucAn::CapNhat(int x, int y)
