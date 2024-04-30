@@ -260,9 +260,9 @@ floodfill(790, 300, GREEN);
         settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 1);
 				 setcolor(RED);
 				 outtextxy(515, 110,"NGUYEN GIA BAO-23520121");
-				 outtextxy(515, 130,"LE KY DUYEN-23520690");
+				 outtextxy(515, 130,"LE KY DUYEN-23520400");
 				 outtextxy(515, 150,"LE NGUYEN MINH KHANG-");
-				 outtextxy(515, 170,"23520400");
+				 outtextxy(515, 170,"23520690");
 
         // TÌNH TRẠNG
         settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 2);
