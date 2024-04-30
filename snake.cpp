@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <ctime>
 #include <cstdlib>
-
+#include <graphics.h>
 using namespace std;
 
 const int ROWS = 20;
@@ -32,7 +32,7 @@ public:
         Huong = PHAI;
     }
     void VeRan();
-    void ThemPhan();
+    void ThemPhan();  // Hàm giúp tăng chiều dài con rắn không vượt quá 30
     void DoiHuongToi(int);
     int CapNhat();
     int LayToaDoX();
@@ -40,29 +40,20 @@ public:
     int LayChieuDai();
 };
 
-void ConRan::VeRan()
+void ConRan::VeRan()         // Vẽ Rắn
 {
-    system("cls");
-    for (int i = 0; i < ROWS; i++)
+    for (int i = 0; i < ChieuDai; i++)
     {
-        for (int j = 0; j < COLS; j++)
-        {
-            bool coThan = false;
-            for (int k = 0; k < ChieuDai; k++)
-            {
-                if (mang[k].x == j && mang[k].y == i)
-                {
-                    cout << "O";
-                    coThan = true;
-                    break;
-                }
-            }
-            if (!coThan)
-                cout << " ";
-        }
-        cout << endl;
+        setcolor(BLUE);
+        rectangle(mang[i].x, mang[i].y, mang[i].x + 30, mang[i].y + 30);
+        if (i == 0)                                      // Làm màu cho Phần Đầu
+            setfillstyle(SOLID_FILL, GREEN);
+        else                                          // Làm màu cho Phần Đuôi
+            setfillstyle(SOLID_FILL, LIGHTGREEN);
+        floodfill(mang[i].x + 15, mang[i].y + 15, BLUE);
     }
 }
+
 
 void ConRan::ThemPhan()
 {
@@ -78,44 +69,60 @@ void ConRan::DoiHuongToi(int huongmoi)
         Huong = huongmoi;
 }
 
-int ConRan::CapNhat()
-{
-    for (int i = ChieuDai - 1; i > 0; i--)
+int ConRan::CapNhat()                                                     // Các chức năng cơ bản
+{                                                                         // Thuật toán di chuyển Rắn
+    for (int i = 1; i < ChieuDai; ++i)                                      // Cung cấp tất cả các phần trước
     {
-        mang[i] = mang[i - 1];
+        if (mang[0].x == mang[i].x && mang[0].y == mang[i].y)
+        {
+            return 0;
+        }
     }
-
+    for (int i = ChieuDai; i >= 0; --i)
+    {
+        if (i == 0)
+        {
+            mang[1].x = mang[0].x;
+            mang[1].y = mang[0].y;
+        }
+        else
+        {
+            mang[i].x = mang[i - 1].x;
+            mang[i].y = mang[i - 1].y;
+        }
+    }
     if (Huong == TRAI)
     {
-        mang[0].x -= 1;
-        if (mang[0].x < 0)
-            mang[0].x = COLS - 1;
+        mang[0].x -= 30;
+        if (mang[0].x == 0)
+        {
+            mang[0].x = 450;
+        }
     }
     else if (Huong == PHAI)
     {
-        mang[0].x += 1;
-        if (mang[0].x >= COLS)
-            mang[0].x = 0;
+        mang[0].x += 30;
+        if (mang[0].x == 480)
+        {
+            mang[0].x = 30;
+        }
     }
     else if (Huong == LEN)
     {
-        mang[0].y -= 1;
-        if (mang[0].y < 0)
-            mang[0].y = ROWS - 1;
+        mang[0].y -= 30;
+        if (mang[0].y == 0)
+        {
+            mang[0].y = 450;
+        }
     }
     else if (Huong == XUONG)
     {
-        mang[0].y += 1;
-        if (mang[0].y >= ROWS)
-            mang[0].y = 0;
+        mang[0].y += 30;
+        if (mang[0].y == 480)
+        {
+            mang[0].y = 30;
+        }
     }
-
-    for (int i = 1; i < ChieuDai; i++)
-    {
-        if (mang[0].x == mang[i].x && mang[0].y == mang[i].y)
-            return 0; // Con rắn đụng vào thân, kết thúc trò chơi
-    }
-
     return 1;
 }
 
@@ -160,67 +167,124 @@ bool ThucAn::CapNhat(int x, int y)
     return false;
 }
 
-void ThucAn::Ve()
+void ThucAn::Ve()                       // Vẽ THỨC ĂN
 {
-    COORD pos = { viTriThucAn.x, viTriThucAn.y };
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
-    cout << "X";
+    setcolor(RED);
+    rectangle(viTriThucAn.x, viTriThucAn.y, viTriThucAn.x + 30, viTriThucAn.y + 30);
+    setfillstyle(INTERLEAVE_FILL, RED);
+    floodfill(viTriThucAn.x + 15, viTriThucAn.y + 15, RED);
 }
+
 
 int main()
 {
+    initwindow(800, 510, "SNAKE GAME");
     ConRan than;
     ThucAn qua;
+    int ChieuDai, dem = 0;
     bool choi = true;
-
+    char chuoiChieuDai[3];
     qua.TaoViTri();
-
-    while (choi)
+    int page = 0;
+     while (1)
     {
-        than.VeRan();
-        qua.Ve();
+        setactivepage(page);
+        setvisualpage(1 - page);
+        cleardevice();
+        setcolor(BLUE);
 
-        if (_kbhit())
+        setfillstyle(SOLID_FILL, BLUE);
+
+
+        if (GetAsyncKeyState(VK_LEFT))
         {
-            char key = _getch();
-            switch (key)
-            {
-            case 'a':
-                than.DoiHuongToi(TRAI);
-                break;
-            case 'w':
-                than.DoiHuongToi(LEN);
-                break;
-            case 'd':
-                than.DoiHuongToi(PHAI);
-                break;
-            case 's':
-                than.DoiHuongToi(XUONG);
-                break;
-            case 'q':
-                choi = false;
-                break;
-            }
+            than.DoiHuongToi(TRAI);
         }
+        if (GetAsyncKeyState(VK_UP))
+        {
+            than.DoiHuongToi(LEN);
+        }
+        if (GetAsyncKeyState(VK_RIGHT))
+        {
+            than.DoiHuongToi(PHAI);
+        }
+        if (GetAsyncKeyState(VK_DOWN))
+        {
+            than.DoiHuongToi(XUONG);
+        }
+        if (GetAsyncKeyState(VK_ESCAPE))
+            break;
 
-        if (!than.CapNhat())
+        if (choi == true && !than.CapNhat())
         {
             choi = false;
         }
+        than.VeRan();
+
 
         if (qua.CapNhat(than.LayToaDoX(), than.LayToaDoY()))
         {
-            qua.TaoViTri();
+            qua.TaoViTri(than.LayToaDoX(), than.LayToaDoY());
             than.ThemPhan();
         }
 
-        if (than.LayChieuDai() == ROWS * COLS)
+        // Khung
+        setcolor(BLUE);
+        rectangle(0, 0, 30, 510);
+        rectangle(30, 0, 480, 30);
+        rectangle(480, 0, 510, 510);
+        rectangle(30, 480, 480, 510);
+        rectangle(510, 0, 800, 20);
+        rectangle(510, 250, 800, 270);
+        rectangle(780, 20, 800, 250);
+        rectangle(510, 490, 800, 510);
+        rectangle(780, 270, 800, 490);
+        setfillstyle(SOLID_FILL, BLUE);
+        floodfill(15, 250, BLUE);
+        floodfill(250, 15, BLUE);
+        floodfill(495, 250, BLUE);
+        floodfill(250, 495, BLUE);
+        floodfill(550, 260, BLUE);
+        floodfill(550, 10, BLUE);
+        floodfill(790, 150, BLUE);
+        floodfill(550, 500, BLUE);
+        floodfill(790, 300, BLUE);
+
+        // ĐIỂM
+        settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 5);
+        setcolor(GREEN);
+        outtextxy(560, 70, "   ĐIỂM  ");
+        outtextxy(520, 130, "   ĐẠT ĐƯỢC");
+        ChieuDai = than.LayChieuDai();
+        chuoiChieuDai[0] = char(48 + ChieuDai / 10);
+        chuoiChieuDai[1] = char(48 + ChieuDai % 10);
+        chuoiChieuDai[2] = '\0';
+        outtextxy(620, 190, chuoiChieuDai);
+
+
+        // TÌNH TRẠNG
+        settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 4);
+        outtextxy(520, 300, "TÌNH TRẠNG :-");
+        if (than.LayChieuDai() == 30)
         {
-            cout << "Ban da chien thang!" << endl;
+            outtextxy(520, 350, "BẠN ĐÃ CHIẾN THẮNG !");
             choi = false;
         }
-        Sleep(100);
-    }
+        else if (choi)
+        {
+            outtextxy(520, 350, "ĐANG CHƠI");
+        }
+        else
+        {
+            outtextxy(520, 350, "KẾT THÚC TRÒ CHƠI");
+        }
+        settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 2);
+        outtextxy(520, 400, "NHẤN 'ESC' ĐỂ THOÁT");
 
-    return 0;
+        qua.Ve();
+        page = 1 - page;
+        delay(100);
+    }
+    getch();
+    closegraph();
 }
