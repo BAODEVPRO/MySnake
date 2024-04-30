@@ -44,9 +44,9 @@ void ConRan::VeRan()         // Vẽ Rắn
         setcolor(BLUE);
         rectangle(mang[i].x, mang[i].y, mang[i].x + 30, mang[i].y + 30);
         if (i == 0)                                      // Làm màu cho Phần Đầu
-            setfillstyle(SOLID_FILL, GREEN);
+            setfillstyle(SOLID_FILL, WHITE);
         else                                          // Làm màu cho Phần Đuôi
-            setfillstyle(SOLID_FILL, LIGHTGREEN);
+            setfillstyle(SOLID_FILL, BROWN);
         floodfill(mang[i].x + 15, mang[i].y + 15, BLUE);
     }
 }
@@ -227,58 +227,62 @@ int main()
         }
 
         // Khung
-        setcolor(BLUE);
-        rectangle(0, 0, 30, 510);
-        rectangle(30, 0, 480, 30);
-        rectangle(480, 0, 510, 510);
-        rectangle(30, 480, 480, 510);
-        rectangle(510, 0, 800, 20);
-        rectangle(510, 250, 800, 270);
-        rectangle(780, 20, 800, 250);
-        rectangle(510, 490, 800, 510);
-        rectangle(780, 270, 800, 490);
-        setfillstyle(SOLID_FILL, BLUE);
-        floodfill(15, 250, BLUE);
-        floodfill(250, 15, BLUE);
-        floodfill(495, 250, BLUE);
-        floodfill(250, 495, BLUE);
-        floodfill(550, 260, BLUE);
-        floodfill(550, 10, BLUE);
-        floodfill(790, 150, BLUE);
-        floodfill(550, 500, BLUE);
-        floodfill(790, 300, BLUE);
+       setcolor(GREEN);
+rectangle(0, 0, 30, 510);
+rectangle(30, 0, 480, 30);
+rectangle(480, 0, 510, 510);
+rectangle(30, 480, 480, 510);
+rectangle(510, 0, 800, 20);
+rectangle(510, 250, 800, 270);
+rectangle(780, 20, 800, 250);
+rectangle(510, 490, 800, 510);
+rectangle(780, 270, 800, 490);
+setfillstyle(SOLID_FILL, GREEN);
+floodfill(15, 250, GREEN);
+floodfill(250, 15, GREEN);
+floodfill(495, 250, GREEN);
+floodfill(250, 495, GREEN);
+floodfill(550, 260, GREEN);
+floodfill(550, 10, GREEN);
+floodfill(790, 150, GREEN);
+floodfill(550, 500, GREEN);
+floodfill(790, 300, GREEN);
 
         // ĐIỂM
-        settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 5);
-        setcolor(GREEN);
-        outtextxy(560, 70, "   ĐIỂM  ");
-        outtextxy(520, 130, "   ĐẠT ĐƯỢC");
+        settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 3);
+        setcolor(YELLOW);
+        outtextxy(515, 70,"DIEM:");
         ChieuDai = than.LayChieuDai();
         chuoiChieuDai[0] = char(48 + ChieuDai / 10);
         chuoiChieuDai[1] = char(48 + ChieuDai % 10);
         chuoiChieuDai[2] = '\0';
-        outtextxy(620, 190, chuoiChieuDai);
-
+        outtextxy(580, 70, chuoiChieuDai);
+        settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 1);
+				 setcolor(RED);
+				 outtextxy(515, 110,"NGUYEN GIA BAO-23520121");
+				 outtextxy(515, 130,"LE KY DUYEN-23520690");
+				 outtextxy(515, 150,"LE NGUYEN MINH KHANG-");
+				 outtextxy(515, 170,"23520400");
 
         // TÌNH TRẠNG
-        settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 4);
-        outtextxy(520, 300, "TÌNH TRẠNG :-");
-        if (than.LayChieuDai() == 30)
-        {
-            outtextxy(520, 350, "BẠN ĐÃ CHIẾN THẮNG !");
-            choi = false;
-        }
-        else if (choi)
-        {
-            outtextxy(520, 350, "ĐANG CHƠI");
-        }
-        else
-        {
-            outtextxy(520, 350, "KẾT THÚC TRÒ CHƠI");
-        }
         settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 2);
-        outtextxy(520, 400, "NHẤN 'ESC' ĐỂ THOÁT");
-
+                 setcolor(BLUE);
+                 outtextxy(520, 300, "STATUS :-");
+                 if (RAN.getChieuDai() == 30)
+                 {
+                      outtextxy(520, 350, "YOU WON !");
+                      playing=false;
+                 }
+                 else if(playing)
+                 {
+                      outtextxy(520, 350, "PLAYING");
+                 }
+                 else
+                 {
+                      outtextxy(520, 350,"GAME OVER");
+                 }
+                 settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 2);
+                 outtextxy(520,400,"NHAN 'ESC' DE THOAT");
         qua.Ve();
         page = 1 - page;
         delay(100);
