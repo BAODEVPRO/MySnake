@@ -42,7 +42,7 @@ Nếu bạn dùng win 64 bit thì hãy download bản 32 bit về cài bình th�
 ### Tính năng chính <a name="main-feature"></a>
 – Khi mở chương trình bạn sẽ vào game để chơi luôn:
 - Ở bên phải sẽ có các mục như [Điểm], Các Sinh Viên thực hiện Và [Status]: Trạng thái. Có 3 trạng thái chính: GameOver, Playing, YouWin.
-- Điểm lúc bắt đầu sẽ là 2 khi đạt đến 30 là bạn chiến thắng trò chơi kết thúc.
+- Điểm lúc bắt đầu sẽ là 1 khi đạt đến 30 là bạn chiến thắng trò chơi kết thúc.
 • Hướng dẫn cách điều khiển
 – Về cơ bản thì cách điều khiển rắn trong game này là sử dụng các phím mũi tên để chuyển hướng.
 – Lưu ý là bạn chỉ có thể chuyển hướng từ phương ngang sang phương dọc và ngược lại.
