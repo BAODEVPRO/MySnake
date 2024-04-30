@@ -16,8 +16,8 @@ Thành viên:
 | STT  | Tên                | MSSV      | Ghi chú     |
 |:-----|:-------------------|:----------|:------------|
 |  1   |   Nguyễn Gia Bảo   | 23520121  |  |
-|  2   |    Lê Kỳ Duyên     | 23520690  |             |
-|  3   |  Lê Nguyễn Minh Khang | 23520400  |             |
+|  2   |    Lê Kỳ Duyên     | 23520400  |             |
+|  3   |  Lê Nguyễn Minh Khang | 23520690  |             |
 
 [Lên đầu trang](#top)
 ## Đề tài <a name="topic"></a>
