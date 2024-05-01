@@ -1,0 +1,495 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[article]{llncs}
+%
+\usepackage{graphicx}
+\usepackage{lipsum}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+\usepackage[utf8]{inputenc}
+\usepackage{vntex}
+\usepackage{color}
+\usepackage{minitoc}
+\begin{document}
+%
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+
+\center % Căn lề giữa
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING 
+%----------------------------------------------------------------------------------------
+
+% Tên trường
+\textsc{\LARGE ĐẠI HỌC QUỐC GIA TPHCM }
+\newline
+\textsc{\LARGE trường đại học công nghệ thông tin}\\ 
+\textsc{\LARGE khoa hệ thống thông tin}\\[1.5cm] 
+% Logo trường
+
+\graphicspath{ {./logo/} }
+ 
+\includegraphics[scale=0.5]{logo-uit.png}\\[1.5cm]
+
+% Môn học
+\textsc{\large báo cáo bài tập }\\ 
+\textsc{\large môn kỹ năng nghề nghiệp }\\
+[1.0cm]
+
+%----------------------------------------------------------------------------------------
+%	TITLE 
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries  \textcolor{red}{\LARGE ĐỒ ÁN MÔN HỌC }\\}\\[0.4cm] 
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	TÁC GIẢ 
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{1.5\textwidth}
+\begin{flushleft} \large
+\emph{}\\
+Giảng viên hướng dẫn: \textbf{Nguyễn Văn Toàn}\\
+Lớp: \textbf{ss004.O21}\\
+Khóa: \textbf{2023-2027}\\
+Sinh viên thực hiện:\\
+1.\textbf{Lê Nguyễn Minh Khang} 23520690 \\
+2.\textbf{Nguyễn Gia Bảo} 23520121 \\
+3.\textbf{Lê Kỳ Duyên} 23520400 \\
+
+\end{flushleft}
+\end{minipage}
+~
+\begin{flushright}\large
+\emph{}\\
+\textbf{\textit{TP Hồ Chí Minh, ngày 24 tháng 04 năm 2024}}\\
+\end{flushright}
+%----------------------------------------------------------------------------------------
+%	NỘI DUNG 
+%----------------------------------------------------------------------------------------
+
+
+
+\vfill 
+
+\end{titlepage}
+
+\dominitoc[n]
+\chapter{MỤC LỤC}
+\minitoc
+
+\newpage
+
+\title{FINAL COURSE PROJECT}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{First Author\inst{1}\orcidID{23520690} \and
+Second Author\inst{2}\orcidID{23520121} \and
+Third Author\inst{3}\orcidID{23520400}}
+%
+\authorrunning{F. Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Lê Nguyễn Minh Khang\\
+\email{23520690@gm.uit.edu.vn}\\
+\and
+Nguyễn Gia Bảo\\
+\email{23520121@gm.uit.edu.vn}
+\and
+Lê Kỳ Duyên\\
+\email{23520400@gm.uit.edu.vn}}
+%
+\maketitle              % typeset the header of the contribution
+%
+
+\section{HỢP ĐỒNG NHÓM}
+\subsection{Mục đích}
+\begin{table}
+    \centering
+    \begin{tabular}{|1|1|1|}
+    \hline
+        Họ và tên & MSSV & Công việc\\
+        \hline
+         Lê Nguyễn Minh Khang&  23520690& [nhiệm vụ quản lý]:\\
+         &  & Thời gian , thời hạn của đồ án , phân chia công việc, tạo và quản lý trello.\\
+         &  & [nhiệm vụ code]:\\
+         &  & Code: viền khung , con rắn , hướng di chuyển.\\
+         &  & [nhiệm vụ nội dung]:\\
+         &  & Hợp đồng nhóm, mô tả quá trình làm việc nhóm.\\
+         \hline
+         Nguyễn Gia Bảo&  23520121& [nhiệm vụ quản lý]:\\
+         &  & Quản lý kiểm tra và quản lý code , tạo và quản lý code bằng github.\\
+         &  & [nhiệm vụ code]:\\
+         &  & Kết nối các phần code của các thành viên khác, đồ họa\\
+         &  & [nhiệm vụ nội dung]:\\
+         &  & Tài liệu kĩ thuật trò chơi.\\
+         \hline
+         Lê Kỳ Duyên&  23520400& [nhiệm vụ quản lý]:\\
+         &  & Tạo, quản lý nội dung và chỉnh sửa các phần của đồ án trên Overleaf\\
+         &  & [nhiệm vụ code]:\\
+         &  & Code: phần mồi và tăng kích thước con rắn khi ăn mồi.\\
+         &  & [nhiệm vụ nội dung]:\\
+         &  & Giới thiệu và hướng dẫn về trò chơi.\\
+         \hline
+    \end{tabular}
+    \caption{Thành viên nhóm và công việc}
+    \label{tab:my_label}
+\end{table}
+Mục đích của hợp đồng này là để thiết lập và quản lý một nhóm làm việc hiệu quả để hoàn thành dự án/nhiệm vụ được giao.
+Mục tiêu cuối cùng của nhóm là đạt được thành công trong việc hoàn thành dự án/nhiệm vụ, đảm bảo chất lượng và đúng tiến độ.
+
+\subsection{Nhiệm vụ}
+
+Nhóm sẽ làm việc cùng nhau để hoàn thành công việc được giao theo tiến độ đã thống nhất.
+Mỗi thành viên sẽ có các nhiệm vụ cụ thể được giao phân công dựa trên kỹ năng và khả năng của họ.
+Nhiệm vụ của mỗi thành viên sẽ được xác định rõ ràng trong danh sách công việc và kế hoạch làm việc.
+
+\subsection{Quyền và nghĩa vụ}
+•	Mỗi thành viên nhóm có quyền:
+Đóng góp ý kiến và ý tưởng vào dự án/nhiệm vụ.
+Thực hiện các công việc theo phân công và tiến độ.
+Tham gia vào quá trình ra quyết định và biểu quyết.
+
+•	Mỗi thành viên nhóm có nghĩa vụ:
+Thực hiện công việc của mình đúng theo tiến độ đã thống nhất.
+Tham gia vào các cuộc họp và thảo luận của nhóm.
+Tôn trọng ý kiến và quyết định của các thành viên khác trong nhóm.
+
+\subsection{Phân chia công việc}
+Các công việc sẽ được phân chia dựa trên kỹ năng và khả năng của mỗi thành viên.
+Tiến độ cụ thể của từng công việc sẽ được xác định và ghi rõ trong kế hoạch làm việc.
+
+\subsection{Tỉ lệ biểu quyết}
+Các quyết định quan trọng trong quá trình làm việc sẽ được quyết định thông qua biểu quyết của tất cả các thành viên trong nhóm. Một quyết định được coi là được chấp nhận khi đạt được sự đồng thuận của đa số thành viên.
+
+\subsection{Thời hạn}
+Hợp đồng này có hiệu lực từ ngày ký và kéo dài cho đến khi dự án/nhiệm vụ được hoàn thành và chấp nhận.
+Thời gian cụ thể cho các giai đoạn quan trọng của dự án/nhiệm vụ cũng sẽ được xác định.
+
+\subsection{Chấm dứt hợp đồng}
+Hợp đồng có thể chấm dứt trước thời hạn bằng thỏa thuận của tất cả các bên hoặc khi một bên không thực hiện đúng nghĩa vụ của mình.
+
+\subsection{Công cụ/ không gian làm việc nhóm}
+Trello : nơi để theo dõi và giao việc, với các danh sách, thẻ và bảng để tổ chức công việc. Các thành viên nhóm có thể dễ dàng xem trạng thái của các nhiệm vụ và cập nhật tiến độ của mình.
+
+\textcolor{blue}{Link: https://bom.so/r7TPxp}
+
+GitHub : nền tảng quản lý mã nguồn mở, cho phép các thành viên làm việc cùng nhau trên mã nguồn, theo dõi thay đổi và xem xét mã nguồn. Các tính năng như pull requests và issues giúp cải thiện quá trình làm việc nhóm và tạo điều kiện cho phản hồi dễ dàng và cải thiện mã nguồn.
+
+\textcolor{blue}{Link: https://github.com/BAODEVPRO/MySnake}
+
+Slack : một nền tảng giao tiếp, cho phép các thành viên trong nhóm trò chuyện, chia sẻ tài liệu và tương tác với nhau một cách thuận tiện. 
+
+Overleaf : cho phép các nhóm làm việc hiệu quả hơn trên các dự án với tài liệu LaTeX, Thông qua giao diện trực tuyến của Overleaf, các thành viên có thể cùng truy cập và chỉnh sửa tài liệu LaTeX một cách đồng thời từ bất kỳ đâu và bất kỳ thiết bị nào có kết nối internet. tạo điều kiện cho sự hợp tác và trao đổi thông tin một cách dễ dàng và linh hoạt.
+
+\textcolor{blue}{Link:https://www.overleaf.com/read/btjsjkxgsrxf#25cc58 }
+
+\subsection{Tiêu chí đánh giá cá nhân và nhóm}
+•	Đánh giá cá nhân ,mỗi thành viên sẽ được đánh giá dựa trên các tiêu chí sau:
+Mức độ hoàn thành công việc được giao đúng hạn và đạt yêu cầu chất lượng.
+Sự tham gia và đóng góp vào các cuộc họp và thảo luận nhóm.
+Sự sẵn lòng nhận và đưa ra phản hồi để cải thiện bản thân và nhóm.
+Sự sáng tạo và đóng góp ý tưởng mới vào dự án/nhiệm vụ.
+
+
+•	Đánh giá nhóm ,cả nhóm sẽ được đánh giá dựa trên các tiêu chí sau
+Khả năng hoàn thành mục tiêu dự án đúng tiến độ và đạt yêu cầu.
+Sự hợp tác và tương tác giữa các thành viên trong nhóm.
+Hiệu quả trong việc sử dụng các công cụ và nguồn lực đã thống nhất.
+Sự đồng bộ và nhất quán trong công việc và quyết định của nhóm.
+
+\subsection{Cam kết}
+•	Chúng tôi, các thành viên của nhóm, cam kết: 
+Hoàn thành các nhiệm vụ được giao theo tiến độ và chất lượng được yêu cầu.
+Tôn trọng ý kiến và quyết định của nhau và làm việc hòa thuận với nhau.
+Tham gia tích cực vào các cuộc họp và thảo luận của nhóm.
+Đóng góp ý kiến và ý tưởng của mình vào dự án/nhiệm vụ.
+
+\newpage
+
+\section{PHẦN GIỚI THIỆU VÀ HƯỚNG DẪN CHƠI GAME}
+\subsection{Giới thiệu}
+    "Con Rắn" là một trò chơi kinh điển được phát triển từ những năm 1970 và trở nên phổ biến trên nhiều nền tảng, từ các máy chơi game cầm tay đến điện thoại di động và máy tính cá nhân.Có thể nói trò chơi "Con Rắn" là cột mốc đầu tiên cho các trò chơi điện tử sau nay.Trong trò chơi này, người chơi điều khiên một con rắn để ăn thức ăn và tránh va chạm vào bản thân của nó hoặc các ranh giới của màn hình. Đặc biêt là ngày nay có nhiều phiên bản biến tấu mới của nó như Slither.io. Mặc dù vậy trò chơi "Con Rắn" vẫn có sức hút to lớn bởi lối chơi đơn giản, có tính giải trí cao. Đến với Snakegame này bạn sẽ được trải nghiệm chế độ chơi ngày xưa để hoài niệm về tuổi thơ đông thời nó còn được nâng cấp lên một phiên bản màu sắc và sinh động hơn rất nhiều so với phiên bản trắng đen trên những chiếc điện thoại xưa.\\
+    Trò chơi "Con Rắn" không chỉ là một trò chơi giải trí đơn giản mà còn là một thách thức về sự tập trung và phản xạ nhanh nhạy. Đồ họa đơn giản những gây nghiện và tính chất thời gian khiến người chơi không thể rời mắt khỏi màn hình.
+\subsection{Hướng dẫn chơi game}
+    \begin{itemize}
+        \item Snakegame có cấu hình rất nhẹ, có thể tải về và chơi một cách nhanh chóng.
+    \end{itemize}
+    \begin{itemize}
+        \item Cài đặt Snakegame:\\
+        Bạn chỉ tải mã nguồn chương trình về và mở file SnakeGame.exe để bắt đầu chơi game.
+    \end{itemize}
+    \begin{itemize}
+        \item Giao diện: Khi bạn mở chương trình sẽ vào game để chơi luôn.\\
+        Có 3 trạng thái chính: GameOver, Playing,YouWin.\\
+        Điểm để xem bảng xếp hạng của năm người có điểm số cao nhất.\\
+        esc để thoát khỏi Game\\
+        Điểm bắt đầu sẽ a=là 1 khi đạt đến 30 là bạn chiến thắng trò chơi kết thúc.\\
+        Sử dụng con trỏ chuột để click vào mục bạn muốn chọn.
+    \end{itemize}
+    \begin{itemize}
+        \item Chế độ chơi\\
+        Chế độ Classic:\\
+        Bạn sẽ hóa thân thành một chú rắn và sử dụng kỹ năng điều khiển một cách khéo léo để ăn được thức ăn.\\
+        Sau mỗi lần ăn được, cơ thể chú rắn sẽ tăng lên một đốt và điểm số của bạn tất nhiên sẽ tăng lên.\\
+        Nếu rắn đi ra ngoài mép tường - cho rắn xuất hiện lại ở phía bên kia.\\
+        Bạn sẽ thua nếu ăn phải thân mình.\\
+    \end{itemize}
+    
+    \begin{itemize}
+        \item Cách chơi game
+    \begin{itemize}
+        \item Bắt đầu trò chơi:\\ 
+        Khởi động trò chơi bằng cách chạy chương trình hoặc ứng dụng chơi game "Con Rắn" trên thiết bị của bạn.
+    \end{itemize}
+    \begin{itemize}
+        \item Di chuyển con rắn:\\
+        Sử dụng các mũi tên ( lên, xuống,trái, phải) hoặc các phím WASD để di chuyên con rắn.\\
+        Di chuyển con rắn để ăn thức ăn ( thường được biểu diễn bangdw một biểu tượng như quả táo hoặc viên thức ăn) xuất hiện trên màn hình.
+    \end{itemize}
+    \begin{itemize}
+        \item Ăn thức ăn:\\
+        Khi con rắn ăn được một mảnh thức ăn, nó sẽ tăng kích thước lên và bạn sẽ nhận được điểm số.\\
+        Mục tiêu của bạn là cố gắng ăn thật nhiều thức ăn có thể để con rắn trở nên dài hơn và bạn đạt điểm số cao nhất.
+    \end{itemize}
+    \begin{itemize}
+        \item Tránh va cham:\\
+        Hãy tránh để con rắn của bạn va chạm vào bản thân nó hoặc chạm vào các ranh giới của màn hình.\\
+        Nếu con rắn chạm vào bất kỳ vật thể nào, trò chơi sẽ kết thúc.
+    \end{itemize}
+    \begin{itemize}
+        \item Theo dõi điểm số:\\
+        Điểm số của bạn sẽ được hiển thị trên màn hình. Cố gắng để đạt được điểm số cao nhất có thể.
+    \end{itemize}
+    \begin{itemize}
+        \item Chơi lại:\\
+        Sau khi trò chơi kết thúc, bạn có thể chơi lại bằng cách khởi động lại trò chơi và thử thách mình để cải thiện kỹ năng và điểm số.
+    \end{itemize}
+     \end{itemize}
+\newpage
+
+\section{TÀI LIỆU KỸ THUẬT CỦA TRÒ CHƠI}
+\subsection{Mô tả bằng lưu đồ thuật toán}
+\includegraphics[scale=0.5]{hinh1.jpg}
+\includegraphics[scale=0.5]{hinh2.jpg}
+\includegraphics[scale=0.5]{hinh3.jpg}
+\includegraphics[scale=0.5]{hinh4.jpg}
+\subsection{Công nghệ sử dụng}
+    \begin{itemize}
+        \item Ngôn ngữ: C++
+    \end{itemize}
+    \begin{itemize}
+        \item IDE: DevC++\\
+        Vì sự tiện lợi, cấu hình của DevC++ nhẹ có thể sử dụng trên nhiều máy tính. Ngoài ra việc cài đặt rất dễ dàng.
+    \end{itemize}
+    \begin{itemize}
+        \item Thư viện đồ họa: graphic.h và winbgim.h. Tải file graphics-lib-devC.zip tại repo này về và giải nén.
+    \end{itemize}
+    \begin{itemize}
+        \item \\
+        Đầu tiên phải tải DevC++ - file libbgi.a vào thư mục lib( thường là C:/ProgramFiles/Dev-Cpp /MinGW32/lib)-file winbgim.h và graphics.h vào thư mục include (thường là C:/Program Files/Dev-Cpp/MinGW32/include) – 2 file 6-ConsoleAppGraphics.template và file ConsoleApp_cpp_graph.txt vào thư mục Templates (thường là C:/Program Files/Dev-Cpp/Templates) Nếu bạn dùng win 64 bit thì hãy download bản 32 bit về cài bình thường và copy các file như trên nhưng vào thư mục từ C:Program Files (x86)Dev-Cpp…
+    \end{itemize}
+\subsection{Khởi tạo và thiết lập}
+    \begin{itemize}
+        \item Tổng quát:\\
+    Trò chơi bắt đầu bằng việc khởi tạo và thiết lập các giá trị ban đầu cho trạng thái của trò chơi, bao gồm vị trí ban đầu của con rắn, điểm số, thức ăn và các biến khác.\\
+    Con rắn được cấu tạo bởi các điểm (x,y) nối lại với nhau( số điểm chính là độ dài của con rắn). Khởi tạo trò chơi, ta đặt độ dài ban đầu của nó là 1. Trong suốt quá trình trò chơi diễn ra, ta phải lưu hết tọa độ và bổ sung thêm số lượng các điểm đó.\\
+    Mỗi bước di chuyển của rắn, mỗi đốt sẽ di chuyển 1 đơn vị độ dài bằng nhau.Ta chỉ cần nắm bắt đốt thân đầu tiên ( đầu của rắn) tiến lên theo hướng di chuyển, các đốt thân phía sau di chuyển đến vị trí cũ của đốt thân phía trước nó.\\
+    Thức ăn của nó cũng là 1 điểm giống như 1 đốt thân của rắn. Tại mỗi thời điểm vị trí của thức ăn là ngẫu nhiên.
+    \end{itemize}
+    \begin{itemize}
+        \item Thể hiện bằng ngôn ngữ lập trình:\\
+        Con rắn: Một mảng các điểm tương ứng với các đốt của con rắn. Tại mỗi đốt sẽ có điểm (x,y) lưu vị trí hiện tại và điểm (x',y') lưu vị trí trước đó để khi cần sẽ sử dụng.\\
+        Thức ăn: là một điểm (x,y) lưu 1 đối tượng thức ăn. Tại mỗi thời điểm chỉ có 1 thức ăn và xuất hiện ngẫu nhiên.\\
+        Để con rắn di chuyển, ta cần một biến để lưu hướng di chuyển, ta cũng sử dụng 1 điểm (x,y).\\
+        vd:hướng phải thì điểm (30,0) tức là tọa độ x tăng 30 và tọa độ y không đổi. Để thay đổi hướng đi ta chỉ cần thay đổi giá trị của điểm (x,y)
+    \end{itemize}
+    \begin{itemize}
+        \item Khởi tạo các thư viện cần thiết:\\
+        iostream: Để nhập/ xuất cơ bản.\\
+        conio.h: Để sử dụng hàm kbhit\\
+        window.h: Để sử dụng hàm GetAsyncKeyState().\\
+        ctime: Để sử dụng hàm time()\\
+        cstdlib: Để sử dụng hàm rand() và srand() để tạo số ngẫu nhiên.\\
+        graphics.h: Thư viện đồ họa.\\
+        Cấu trúc 'VITRI' lưu trữ vị trí (x,y) của các phần tử trong trò chơi.
+        \end{itemize}
+\subsection{Vẽ màn hình}
+    Chức năng này được sử dụng để vẽ màn hình trò chơi, hiển thị con rắn, thức ăn và các phần tử khác trên màn hình.\\
+    \textbf{Class Con Ran}: có thuộc tính là mảng 'mang' để lưu trữ tọa độ các đốt của con rắn. Biến 'Huong' để lưu trữ hướng di chuyển hiện tại và biến 'ChieuDai' để lưu trữ chiều dài của con rắn.\\
+    'ConRan()': Hàm khởi tạo của lớp ConRan\\
+    'VeRan()': Vẽ con rắn trên màn hình\\
+    
+    \\
+    \includegraphics[scale=0.2]{z5398633470201_d561bf390cc192d900b499eac857a87d.jpg}
+\subsection{Nhập lệnh từ người chơi}
+    Chức năng này cho phép người chơi tương tác với trò chơi bằng cách nhập các lệnh từ bàn phím, điều khiển hướng di chuyển của con rắn.
+\subsection{Xử lý di chuyển và va chạm}
+    Chức năng này xử lý logic di chuyển của con rắn dựa trên các lệnh nhập từ người chơi và kiểm tra các trường hợp va chạm của con rắn với thức ăn hoặc các ranh giới của màn hình.\\
+    Enum 'HUONG' định nghĩa các hướng di chuyển của con rắn: TRAI,PHAI,LEN,XUONG.\\
+    'DoiHuongToi()': Thay đổi hướng di chuyển của con rắn.\\
+     'CapNhat()': Cập nhật vị trí của con rắn sau khi di chuyển và kiểm tra xem có va chạm hay không.
+\subsection{Tạo thức ăn và tăng kích thước của con rắn}
+    Trong qua trình trò chơi diễn ra, thức ăn sẽ được tạo ra ở vị trí ngẫu nhiên trên màn hình. Khi con rắn ăn được thức ăn, kích thước của nó sẽ tăng lên và điểm số cũng sẽ được cập nhật.\\
+    \textbf{Class Thuc An}: lưu trữ vị trí của thức ăn.\\
+    'ThemPhan()': Thêm phần mới vào con rắn.\\
+\subsection{Kết thúc trò chơi}
+    Trò chơi sẽ kết thúc khi con rắn va chạm vào bản thân mình hoặc vào các ranh giới của màn hình. Khi đó, thông báo kết thúc trò chơi sẽ được hiển thị cùng với điểm số của người chơi
+
+\newpage
+
+\section{MÔ TẢ QUÁ TRÌNH LÀM VIỆC NHÓM}
+\subsection{Qúa trình thành lập nhóm}
+    Khi có thông báo làm bài tập đồ án cuối kỳ dựa trên làm việc nhóm tối thiếu 3 người tối đa 5 người. Bạn Nguyễn Gia Bảo và bạn Lê Nguyễn Minh Khang đã liên lạc với nhau trước. Không dừng lại ở đó nhóm chúng em đã thêm 1 thành viên là bạn Lê Kỳ Duyên vào đủ 3 thành viên để hoàn thành đồ án cuối kỳ 1 cách tốt nhất.
+\subsection{Làm hợp đồng nhóm}
+    bài tập đầu tiên là hợp đồng nhóm, cả nhóm đã quyết định chọn ra một ngày để bàn về việc làm hợp đồng.\\
+    Nội dung của cuộc họp nhóm:\\
+    Giới thiệu bản thân về điểm mạnh và điểm yếu để dễ dàng phân chia công việc phù hợp với khả năng.\\
+    Bầu nhóm trưởng:\\
+    Cả nhóm thống nhất bạn Lê Nguyễn Minh Khang làm nhóm trưởng.\\
+    Việc soạn thảo nội dung và gõ Latex sẽ do bạn Duyên đảm nhiệm chính, các bạn còn lại sẽ hỗ trợ đóng góp ý kiến.\\
+    Bạn Khang đã tạo trello và thêm các bạn vào để dễ dàng quản lý và phân chia công việc.\\
+    Bạn Bảo đã tạo github và thêm thầy và các bạn vào để thày dễ kiểm soát quá trình làm việc của nhóm. Nhóm trưởng cũng khuyến khích các bạn tìm hiểu về github, tạo tài khoản và tìm hiểu cách tạo branch, push code, pull request,...\\
+    Sau khi hoàn thành nhiệm vụ được giao, cả nhóm đã cùng xem lại hợp đồng nhóm một lần nữa để đưa ra những lời nhận xét và góp ý. Chỉnh sửa lỗi trong khi soạn thảo Latex.\\
+    Nhóm trưởng đã đại diện cả nhóm nộp bài lên course.
+\subsection{Code game} 
+    Nhóm trưởng phân chia công việc cho từng thành viên trong nhóm, cụ thể:\\
+    \begin{itemize}
+        \item bạn Khang sẽ đảm nhiệm phần tạo khung và con rắn di chuyển.
+    \end{itemize}
+    \begin{itemize}
+        \item bạn Bảo sẽ có nhiệm vụ tạo main code và đồ họa cho game.
+    \end{itemize}
+    \begin{itemize}
+        \item bạn Duyên sẽ code phần tạo mồi và tăng kích thước cho rắn.
+    \end{itemize}
+    Và cuối cùng nhóm trưởng sẽ test game và push toàn bộ code lên Git.\\
+    Cả nhóm đã bắt tay vào làm việc ngay khi nhiệm vụ được giao. Khuyến khích tinh thần sáng tạo của các thành viên và cũng tinh thần giúp đỡ lẫn nhau để kịp hoàn thành đồ án đúng hạn.\\
+    Cả nhóm cùng dò xét lại báo cáo và code thật kỹ càng, cùng với đó nhóm trưởng sẽ đánh giá phần làm việc nhóm của từng bạn và các thành viên còn lại sẽ đánh giá nhóm trưởng.
+\subsection{Làm báo cáo}
+    Nhóm trưởng phân chia công việc:\\
+    \begin{itemize}
+        \item bạn Khang làm hợp đồng nhóm và mô tả quá trình làm việc.
+    \end{itemize}
+    \begin{itemize}
+        \item bạn Bảo đảm nhiệm tài liệu kỹ thuật trò chơi.
+    \end{itemize}
+    \begin{itemize}
+        \item bạn Duyên giới thiệu và hướng dẫn về trò chơi.
+    \end{itemize}
+    Sau khi hoàn thành nhiệm vụ được giao, cả nhóm cùng nhau xem lại toàn bộ báo cáo để nhận xét, góp ý. Xem những chỗ còn sai xót để kịp thời cùng nhau sửa đổi.
+\subsection{Thuận lợi và khó khăn}
+    \begin{itemize}
+        \item Thuận lợi:\\
+    Cả 3 thành viên đều tuân thủ theo hợp đồng nhóm, hoàn thành nhiệm vụ đúng hạn.\\
+    Không xảy ra tranh cải giữa các thành viên.\\
+    Các thành viên trong nhóm giúp đỡ và hỗ trợ nhau để kịp hoàn thành đồ án.
+    \end{itemize}
+    \begin{itemize}
+        \item Khó khăn:\\
+    Bất đồng code, không cùng ý tưởng.\\
+    Không chung lựa chọn về ngôn ngữ lập trình, có bạn nghĩ lập trình python cũng có bạn nghĩ lập trình C++. Nhóm đã thống nhất lập trình C++.
+    \end{itemize}
+
+\newpage
+
+\section{CÁC KỸ NĂNG MÀ SINH VIÊN ĐÃ ÁP DỤNG TRONG ĐỒ ÁN CUỐI KỲ}
+\begin{itemize}
+    \item Quản lý thời gian: Yếu tố thời gian là một yếu tố quan trong trong làm việc nhóm. Hoàn thành nhiệm vụ trước thời hạn.
+\end{itemize}
+\begin{itemize}
+    \item Lắng nghe: giúp các thành viên trong nhóm tiếp nhận thông tin một cách cởi mở hơn, giúp nhìn nhận vấn đề theo nhiều khía cạnh
+\end{itemize}
+\begin{itemize}
+    \item Giao tiêp:tăng tính tương tác giữa các thành viên, giúp các thành viên trong nhóm hiểu nhau hơn, hạn chế những mâu thuẫn không đáng có xảy ra trong nhóm.
+\end{itemize}
+\begin{itemize}
+    \item Giải quyết vấn đề: xác định rõ được vấn đề cần được giải quyết, luôn bình tĩnh và tìm ra phương án tối ưu nhất để giải quyết vấn đề.
+\end{itemize}
+\begin{itemize}
+    \item Tư duy: ưu tiên những ý tưởng, tư duy, cách nhìn nhận vấn đề một cách mới mẻ, sáng tạo.
+\end{itemize}
+
+\newpage
+
+\section{ĐÁNH GIÁ VIỆC THỰC HIỆN HỢP ĐỒNG NHÓM}
+\subsection{ĐÁNH GIÁ}
+\begin{table}
+    \centering
+    \begin{tabular}{|1|1|1|1|}
+    \hline
+         & Lê Nguyễn & Nguyễn Gia  & Lê Kỳ \\
+          &  Minh Khang&  Bảo& Duyên\\
+    \hline
+         Mức độ hoàn thành công việc được 
+giao đúng hạn&  10&  10& 10\\
+    \hline
+         Đạt yêu cầu chất lượng&  10&  10& 10\\
+    \hline
+         Khả năng làm việc nhóm và tương tác 
+với các thành viên khác&  10&  10& 10\\
+    \hline
+         Sự tham gia và đóng góp vào các cuộc 
+họp và thảo luận nhóm&  10&  10& 10\\
+    \hline
+         Sự sẵn lòng nhận và đưa ra phản hồi để 
+cải thiện bản thân&  10&  10& 10\\
+    \hline
+        Sự sáng tạo và đóng góp ý tưởng mới 
+vào dự án/nhiệm vụ&  10&  10& 10\\
+    \hline
+    \end{tabular}
+    \caption{ĐÁNH GIÁ CÁ NHÂN}
+    \label{tab:my_label}
+\end{table}
+
+\begin{table}
+    \centering
+    \begin{tabular}{|1|1|1|1|}
+        \hline
+         &  Lê Nguyễn&  Nguyễn Gia& Lê Kỳ\\
+         &  Minh Khang&  Bảo& Duyên\\
+         \hline
+         Khả năng hoàn thành mục tiêu dự án 
+đúng tiến độ và đạt yêu cầu&  10&  10& 10\\
+        \hline
+         Sự hợp tác và tương tác giữa các thành 
+viên trong nhóm&  10&  10& 10\\
+        \hline
+         Hiệu quả trong việc sử dụng các công 
+cụ và nguồn lực đã thống nhất&  10&  10& 10\\
+        \hline
+         Sự đồng bộ và nhất quán trong công 
+việc và quyết định của nhóm&  10&  10& 10\\
+        \hline
+    \end{tabular}
+    \caption{ĐÁNH GIÁ NHÓM}
+    \label{tab:my_label}
+\end{table}
+\subsection{NHẬN XÉT}
+\begin{itemize}
+    \item Điểm mạnh của nhóm:\\
+    Các thành viên nhóm đều hoàn thành công việc trước thời hạn được giao.\\
+Các thành viên linh hoạt và thích ứng nhanh chóng với thay đổi, giúp duy trì tiến độ và chất lượng công việc.\\
+Mọi thành viên đều cam kết và chia sẻ một mục tiêu chung, tạo nên một môi trường làm việc đồng đội và tích cực.
+\end{itemize}
+\begin{itemize}
+    \item Điểm yếu của nhóm:\\
+    Các thành viên còn ngại ngùng trong việc giao tiếp, khiến cho thông tin không được truyền đạt một cách rõ ràng hoặc không đồng nhất, gây ra sự hiểu lầm.\\
+Các thành viên còn gặp khó khăn trong việc sử dụng công cụ nhóm Slack, Google Docs, GitHub.
+\end{itemize}
+\end{document}
